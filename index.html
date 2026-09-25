@@ -225,8 +225,164 @@
       </div>
     </section>
 
-    <section id="proyectos" class="min-h-screen flex items-center justify-center pt-16">
-      <h2 class="text-2xl md:text-3xl font-semibold text-slate-400">Proyectos (en construcción)</h2>
+    <section id="proyectos" class="min-h-screen py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto flex flex-col justify-center">
+      <!-- Encabezado de la sección -->
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white mb-4">
+          Mis <span class="text-indigo-400">Proyectos</span>
+        </h2>
+        <p class="text-slate-400 text-base sm:text-lg">
+          Muestra de desarrollos prácticos donde aplico lógica de programación, bases de datos y diseño web responsivo.
+        </p>
+      </div>
+
+      <!-- EDITAR: reemplaza estos proyectos con tus proyectos reales -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Proyecto 1: Python + MySQL -->
+        <article class="bg-slate-800/60 backdrop-blur-sm border border-slate-700/60 rounded-2xl overflow-hidden hover:border-indigo-500/50 hover:shadow-2xl hover:shadow-indigo-500/20 hover:-translate-y-2 transition-all duration-300 flex flex-col group">
+          <!-- Thumbnail placeholder -->
+          <div class="aspect-video bg-slate-800 overflow-hidden relative flex items-center justify-center border-b border-slate-700/60">
+            <div class="w-full h-full bg-gradient-to-br from-slate-800 via-indigo-950/40 to-slate-900 flex flex-col items-center justify-center group-hover:scale-105 transition-transform duration-500">
+              <div class="p-4 rounded-2xl bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 mb-2">
+                <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />
+                </svg>
+              </div>
+              <span class="text-xs font-mono text-slate-400">Python &amp; MySQL Project</span>
+            </div>
+          </div>
+
+          <!-- Contenido del proyecto -->
+          <div class="p-6 flex flex-col flex-grow">
+            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-indigo-400 transition-colors">
+              Sistema de Gestión y CRUD
+            </h3>
+            <p class="text-slate-400 text-sm mb-4 line-clamp-2 leading-relaxed">
+              Software de gestión de registros con operaciones CRUD completas, conexión a base de datos relacional y validaciones.
+            </p>
+
+            <!-- Badges de tecnologías -->
+            <div class="flex flex-wrap gap-2 mb-6 mt-auto">
+              <span class="px-2.5 py-1 text-xs font-medium rounded-md bg-indigo-500/10 text-indigo-300 border border-indigo-500/20">Python</span>
+              <span class="px-2.5 py-1 text-xs font-medium rounded-md bg-violet-500/10 text-violet-300 border border-violet-500/20">MySQL</span>
+              <span class="px-2.5 py-1 text-xs font-medium rounded-md bg-slate-700/50 text-slate-300 border border-slate-600/50">SQL</span>
+            </div>
+
+            <!-- Botones de acción -->
+            <div class="flex items-center gap-3 pt-2 border-t border-slate-700/50">
+              <a href="#" class="flex-1 inline-flex items-center justify-center gap-2 px-3.5 py-2 rounded-xl text-xs sm:text-sm font-medium text-slate-200 bg-slate-700/50 hover:bg-slate-700 hover:text-white border border-slate-600/60 transition-colors duration-200">
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                </svg>
+                Ver código
+              </a>
+              <a href="#" class="flex-1 inline-flex items-center justify-center gap-2 px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold text-white bg-indigo-500 hover:bg-indigo-600 shadow-md shadow-indigo-500/20 transition-all duration-200">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                </svg>
+                Ver demo
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Proyecto 2: HTML / CSS / JS / Bootstrap -->
+        <article class="bg-slate-800/60 backdrop-blur-sm border border-slate-700/60 rounded-2xl overflow-hidden hover:border-indigo-500/50 hover:shadow-2xl hover:shadow-indigo-500/20 hover:-translate-y-2 transition-all duration-300 flex flex-col group">
+          <!-- Thumbnail placeholder -->
+          <div class="aspect-video bg-slate-800 overflow-hidden relative flex items-center justify-center border-b border-slate-700/60">
+            <div class="w-full h-full bg-gradient-to-br from-slate-800 via-indigo-950/40 to-slate-900 flex flex-col items-center justify-center group-hover:scale-105 transition-transform duration-500">
+              <div class="p-4 rounded-2xl bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 mb-2">
+                <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                </svg>
+              </div>
+              <span class="text-xs font-mono text-slate-400">Frontend Web Application</span>
+            </div>
+          </div>
+
+          <!-- Contenido del proyecto -->
+          <div class="p-6 flex flex-col flex-grow">
+            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-indigo-400 transition-colors">
+              Portal Web Interactivo
+            </h3>
+            <p class="text-slate-400 text-sm mb-4 line-clamp-2 leading-relaxed">
+              Sitio web responsivo con interfaz intuitiva, manipulación dinámica del DOM y componentes interactivos adaptados a móviles.
+            </p>
+
+            <!-- Badges de tecnologías -->
+            <div class="flex flex-wrap gap-2 mb-6 mt-auto">
+              <span class="px-2.5 py-1 text-xs font-medium rounded-md bg-indigo-500/10 text-indigo-300 border border-indigo-500/20">HTML</span>
+              <span class="px-2.5 py-1 text-xs font-medium rounded-md bg-indigo-500/10 text-indigo-300 border border-indigo-500/20">CSS</span>
+              <span class="px-2.5 py-1 text-xs font-medium rounded-md bg-violet-500/10 text-violet-300 border border-violet-500/20">JavaScript</span>
+              <span class="px-2.5 py-1 text-xs font-medium rounded-md bg-purple-500/10 text-purple-300 border border-purple-500/20">Bootstrap</span>
+            </div>
+
+            <!-- Botones de acción -->
+            <div class="flex items-center gap-3 pt-2 border-t border-slate-700/50">
+              <a href="#" class="flex-1 inline-flex items-center justify-center gap-2 px-3.5 py-2 rounded-xl text-xs sm:text-sm font-medium text-slate-200 bg-slate-700/50 hover:bg-slate-700 hover:text-white border border-slate-600/60 transition-colors duration-200">
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                </svg>
+                Ver código
+              </a>
+              <a href="#" class="flex-1 inline-flex items-center justify-center gap-2 px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold text-white bg-indigo-500 hover:bg-indigo-600 shadow-md shadow-indigo-500/20 transition-all duration-200">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                </svg>
+                Ver demo
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Proyecto 3: Java -->
+        <article class="bg-slate-800/60 backdrop-blur-sm border border-slate-700/60 rounded-2xl overflow-hidden hover:border-indigo-500/50 hover:shadow-2xl hover:shadow-indigo-500/20 hover:-translate-y-2 transition-all duration-300 flex flex-col group">
+          <!-- Thumbnail placeholder -->
+          <div class="aspect-video bg-slate-800 overflow-hidden relative flex items-center justify-center border-b border-slate-700/60">
+            <div class="w-full h-full bg-gradient-to-br from-slate-800 via-indigo-950/40 to-slate-900 flex flex-col items-center justify-center group-hover:scale-105 transition-transform duration-500">
+              <div class="p-4 rounded-2xl bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 mb-2">
+                <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                </svg>
+              </div>
+              <span class="text-xs font-mono text-slate-400">Java Desktop Application</span>
+            </div>
+          </div>
+
+          <!-- Contenido del proyecto -->
+          <div class="p-6 flex flex-col flex-grow">
+            <h3 class="text-xl font-bold text-white mb-2 group-hover:text-indigo-400 transition-colors">
+              Gestor Bancario en Java
+            </h3>
+            <p class="text-slate-400 text-sm mb-4 line-clamp-2 leading-relaxed">
+              Software basado en programación orientada a objetos para simulación de cuentas, depósitos, retiros y reportes.
+            </p>
+
+            <!-- Badges de tecnologías -->
+            <div class="flex flex-wrap gap-2 mb-6 mt-auto">
+              <span class="px-2.5 py-1 text-xs font-medium rounded-md bg-indigo-500/10 text-indigo-300 border border-indigo-500/20">Java</span>
+              <span class="px-2.5 py-1 text-xs font-medium rounded-md bg-violet-500/10 text-violet-300 border border-violet-500/20">POO</span>
+              <span class="px-2.5 py-1 text-xs font-medium rounded-md bg-slate-700/50 text-slate-300 border border-slate-600/50">Algoritmos</span>
+            </div>
+
+            <!-- Botones de acción -->
+            <div class="flex items-center gap-3 pt-2 border-t border-slate-700/50">
+              <a href="#" class="flex-1 inline-flex items-center justify-center gap-2 px-3.5 py-2 rounded-xl text-xs sm:text-sm font-medium text-slate-200 bg-slate-700/50 hover:bg-slate-700 hover:text-white border border-slate-600/60 transition-colors duration-200">
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                </svg>
+                Ver código
+              </a>
+              <a href="#" class="flex-1 inline-flex items-center justify-center gap-2 px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold text-white bg-indigo-500 hover:bg-indigo-600 shadow-md shadow-indigo-500/20 transition-all duration-200">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                </svg>
+                Ver demo
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
     </section>
 
     <section id="habilidades" class="min-h-screen py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto flex flex-col justify-center">
