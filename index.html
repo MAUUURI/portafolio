@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portafolio | Mauricio Arnold - Desarrollador Junior</title>
+  <meta name="description" content="Portafolio profesional de Mauricio Arnold, programador junior apasionado por el desarrollo web y la creación de experiencias digitales modernas.">
+
+  <!-- Favicon Emoji -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
+
+  <!-- Google Fonts: Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#6366f1',
+            dark: '#0f172a',
+          },
+          fontFamily: {
+            sans: ['Poppins', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- Hoja de estilos personalizada -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-slate-900 text-slate-100 font-sans">
+
+  <!-- Barra de navegación fija con efecto Glassmorphism -->
+  <nav class="fixed top-0 w-full z-50 backdrop-blur-md bg-slate-900/80 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <!-- Logo / Nombre -->
+        <div class="flex-shrink-0">
+          <a href="#inicio" class="text-xl font-bold tracking-tight text-white hover:text-primary transition-colors">
+            Mauricio Arnold
+          </a>
+        </div>
+
+        <!-- Enlaces Desktop -->
+        <div class="hidden md:flex space-x-8">
+          <a href="#inicio" class="text-slate-300 hover:text-primary transition-colors text-sm font-medium">Inicio</a>
+          <a href="#sobre-mi" class="text-slate-300 hover:text-primary transition-colors text-sm font-medium">Sobre Mí</a>
+          <a href="#proyectos" class="text-slate-300 hover:text-primary transition-colors text-sm font-medium">Proyectos</a>
+          <a href="#habilidades" class="text-slate-300 hover:text-primary transition-colors text-sm font-medium">Habilidades</a>
+          <a href="#estudios" class="text-slate-300 hover:text-primary transition-colors text-sm font-medium">Estudios</a>
+          <a href="#contacto" class="text-slate-300 hover:text-primary transition-colors text-sm font-medium">Contacto</a>
+        </div>
+
+        <!-- Botón Hamburguesa Móvil -->
+        <div class="md:hidden flex items-center">
+          <button id="menu-btn" type="button" aria-label="Abrir menú" class="text-slate-300 hover:text-white focus:outline-none p-2 rounded-md">
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Menú Móvil (oculto inicialmente) -->
+    <div id="mobile-menu" class="hidden md:hidden px-4 pt-2 pb-4 space-y-1 bg-slate-900/95 border-b border-slate-800">
+      <a href="#inicio" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800 transition-colors">Inicio</a>
+      <a href="#sobre-mi" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800 transition-colors">Sobre Mí</a>
+      <a href="#proyectos" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800 transition-colors">Proyectos</a>
+      <a href="#habilidades" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800 transition-colors">Habilidades</a>
+      <a href="#estudios" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800 transition-colors">Estudios</a>
+      <a href="#contacto" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800 transition-colors">Contacto</a>
+    </div>
+  </nav>
+
+  <!-- Secciones del portafolio -->
+  <main>
+    <section id="inicio" class="min-h-screen flex items-center justify-center pt-16">
+      <h2 class="text-2xl md:text-3xl font-semibold text-slate-400">Inicio (en construcción)</h2>
+    </section>
+
+    <section id="sobre-mi" class="min-h-screen flex items-center justify-center pt-16">
+      <h2 class="text-2xl md:text-3xl font-semibold text-slate-400">Sobre Mí (en construcción)</h2>
+    </section>
+
+    <section id="proyectos" class="min-h-screen flex items-center justify-center pt-16">
+      <h2 class="text-2xl md:text-3xl font-semibold text-slate-400">Proyectos (en construcción)</h2>
+    </section>
+
+    <section id="habilidades" class="min-h-screen flex items-center justify-center pt-16">
+      <h2 class="text-2xl md:text-3xl font-semibold text-slate-400">Habilidades (en construcción)</h2>
+    </section>
+
+    <section id="estudios" class="min-h-screen flex items-center justify-center pt-16">
+      <h2 class="text-2xl md:text-3xl font-semibold text-slate-400">Estudios (en construcción)</h2>
+    </section>
+
+    <section id="contacto" class="min-h-screen flex items-center justify-center pt-16">
+      <h2 class="text-2xl md:text-3xl font-semibold text-slate-400">Contacto (en construcción)</h2>
+    </section>
+  </main>
+
+  <!-- Script principal diferido al final del body -->
+  <script src="js/script.js" defer></script>
+</body>
+</html>
