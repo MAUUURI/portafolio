@@ -50,17 +50,17 @@
 
         <!-- Enlaces Desktop -->
         <div class="hidden md:flex space-x-8">
-          <a href="#inicio" class="text-slate-300 hover:text-primary transition-colors text-sm font-medium">Inicio</a>
-          <a href="#sobre-mi" class="text-slate-300 hover:text-primary transition-colors text-sm font-medium">Sobre Mí</a>
-          <a href="#proyectos" class="text-slate-300 hover:text-primary transition-colors text-sm font-medium">Proyectos</a>
-          <a href="#habilidades" class="text-slate-300 hover:text-primary transition-colors text-sm font-medium">Habilidades</a>
-          <a href="#estudios" class="text-slate-300 hover:text-primary transition-colors text-sm font-medium">Estudios</a>
-          <a href="#contacto" class="text-slate-300 hover:text-primary transition-colors text-sm font-medium">Contacto</a>
+          <a href="#inicio" class="relative py-1 text-slate-300 hover:text-white transition-colors duration-200 text-sm font-medium after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-indigo-500 hover:after:w-full after:transition-all after:duration-300">Inicio</a>
+          <a href="#sobre-mi" class="relative py-1 text-slate-300 hover:text-white transition-colors duration-200 text-sm font-medium after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-indigo-500 hover:after:w-full after:transition-all after:duration-300">Sobre Mí</a>
+          <a href="#proyectos" class="relative py-1 text-slate-300 hover:text-white transition-colors duration-200 text-sm font-medium after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-indigo-500 hover:after:w-full after:transition-all after:duration-300">Proyectos</a>
+          <a href="#habilidades" class="relative py-1 text-slate-300 hover:text-white transition-colors duration-200 text-sm font-medium after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-indigo-500 hover:after:w-full after:transition-all after:duration-300">Habilidades</a>
+          <a href="#estudios" class="relative py-1 text-slate-300 hover:text-white transition-colors duration-200 text-sm font-medium after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-indigo-500 hover:after:w-full after:transition-all after:duration-300">Estudios</a>
+          <a href="#contacto" class="relative py-1 text-slate-300 hover:text-white transition-colors duration-200 text-sm font-medium after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-indigo-500 hover:after:w-full after:transition-all after:duration-300">Contacto</a>
         </div>
 
         <!-- Botón Hamburguesa Móvil -->
         <div class="md:hidden flex items-center">
-          <button id="menu-btn" type="button" aria-label="Abrir menú" class="text-slate-300 hover:text-white focus:outline-none p-2 rounded-md">
+          <button id="menu-btn" type="button" aria-label="Abrir menú" class="text-slate-300 hover:text-white focus:outline-none p-2 rounded-md transition-colors">
             <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
             </svg>
@@ -82,8 +82,59 @@
 
   <!-- Secciones del portafolio -->
   <main>
-    <section id="inicio" class="min-h-screen flex items-center justify-center pt-16">
-      <h2 class="text-2xl md:text-3xl font-semibold text-slate-400">Inicio (en construcción)</h2>
+    <section id="inicio" class="min-h-screen relative flex flex-col items-center justify-center text-center px-4 sm:px-6 lg:px-8 pt-16 pb-12 overflow-hidden bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900">
+      <!-- Blobs decorativos de fondo con desenfoque y animación suave -->
+      <div class="absolute top-1/4 -left-20 w-72 h-72 md:w-96 md:h-96 bg-indigo-600 rounded-full blur-3xl opacity-20 filter animate-pulse animate-blob pointer-events-none"></div>
+      <div class="absolute top-1/3 -right-20 w-80 h-80 md:w-96 md:h-96 bg-violet-600 rounded-full blur-3xl opacity-20 filter animate-pulse animate-blob animation-delay-2000 pointer-events-none"></div>
+      <div class="absolute -bottom-10 left-1/2 -translate-x-1/2 w-80 h-80 md:w-[32rem] md:h-[32rem] bg-indigo-500 rounded-full blur-3xl opacity-20 filter animate-pulse animate-blob animation-delay-4000 pointer-events-none"></div>
+
+      <!-- Contenedor principal de la sección Hero -->
+      <div class="relative z-10 max-w-4xl mx-auto flex flex-col items-center">
+        <!-- Foto de perfil circular placeholder con iniciales y borde degradado -->
+        <div class="relative p-1 rounded-full bg-gradient-to-tr from-indigo-500 via-purple-500 to-indigo-400 shadow-xl shadow-indigo-500/10 mb-8 transform transition duration-500 hover:scale-105">
+          <div class="w-32 h-32 md:w-40 md:h-40 rounded-full bg-slate-900 flex flex-col items-center justify-center border-4 border-slate-900 overflow-hidden">
+            <span class="text-4xl md:text-5xl font-black tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-300 to-indigo-200">
+              MA
+            </span>
+            <span class="text-xs uppercase tracking-widest text-indigo-400/80 font-mono mt-1">&lt;/&gt;</span>
+          </div>
+        </div>
+
+        <!-- Título principal -->
+        <h1 class="text-5xl md:text-7xl font-bold tracking-tight text-white mb-4">
+          Hola, soy <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-300 to-indigo-200">Mauricio Arnold</span>
+        </h1>
+
+        <!-- Subtítulo con span estático para futuro efecto mecanográfico -->
+        <div class="text-xl md:text-3xl font-medium text-slate-300 mb-6 flex items-center justify-center gap-2">
+          <span id="typed-text" class="text-indigo-400 font-semibold border-b-2 border-indigo-400/50 pb-0.5">Desarrollador Junior</span>
+        </div>
+
+        <!-- Frase breve de presentación -->
+        <p class="max-w-2xl text-slate-400 text-base md:text-lg mb-10 leading-relaxed text-balance">
+          Apasionado por el desarrollo web y la creación de experiencias digitales modernas, reactivas y accesibles. Enfocado en escribir código limpio y el aprendizaje continuo.
+        </p>
+
+        <!-- Botones CTA -->
+        <div class="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
+          <a href="#proyectos" class="w-full sm:w-auto px-8 py-3.5 rounded-xl font-semibold text-white bg-indigo-500 hover:bg-indigo-600 shadow-lg shadow-indigo-500/25 hover:shadow-indigo-500/40 transition-all duration-300 transform hover:-translate-y-0.5 text-center">
+            Ver proyectos
+          </a>
+          <a href="#contacto" class="w-full sm:w-auto px-8 py-3.5 rounded-xl font-semibold text-slate-200 border-2 border-slate-700 hover:border-indigo-400 hover:text-white hover:bg-indigo-500/10 transition-all duration-300 transform hover:-translate-y-0.5 text-center">
+            Contáctame
+          </a>
+        </div>
+      </div>
+
+      <!-- Flecha animada (bounce) apuntando a #sobre-mi -->
+      <div class="absolute bottom-6 left-1/2 -translate-x-1/2 z-10">
+        <a href="#sobre-mi" aria-label="Ir a la sección Sobre Mí" class="flex flex-col items-center text-slate-400 hover:text-indigo-400 transition-colors group">
+          <span class="text-xs uppercase tracking-widest text-slate-500 group-hover:text-indigo-400 mb-1 transition-colors">Conóceme</span>
+          <svg class="w-6 h-6 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+          </svg>
+        </a>
+      </div>
     </section>
 
     <section id="sobre-mi" class="min-h-screen flex items-center justify-center pt-16">
