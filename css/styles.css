@@ -30,3 +30,107 @@ html {
 .animation-delay-4000 {
   animation-delay: 4s;
 }
+
+/* Transición global suave para el cambio de modo oscuro en body */
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Scroll reveal: estado oculto y estado visible */
+.reveal {
+  opacity: 0;
+  transform: translateY(2rem); /* translate-y-8 */
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Cursor parpadeante para el efecto de mecanografía */
+.typing-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1.2em;
+  background-color: #818cf8;
+  vertical-align: middle;
+  margin-left: 2px;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Soporte de variables y reglas para modo claro cuando <html> no tiene la clase .dark */
+html:not(.dark) body {
+  background-color: #f8fafc;
+  color: #1e293b;
+}
+
+html:not(.dark) nav {
+  background-color: rgba(255, 255, 255, 0.85);
+  border-color: #e2e8f0;
+}
+
+html:not(.dark) nav a {
+  color: #475569;
+}
+
+html:not(.dark) nav a:hover {
+  color: #4f46e5;
+}
+
+html:not(.dark) #mobile-menu {
+  background-color: rgba(255, 255, 255, 0.98);
+  border-color: #e2e8f0;
+}
+
+html:not(.dark) #inicio {
+  background: linear-gradient(to bottom right, #f8fafc, #eef2ff, #f8fafc);
+}
+
+html:not(.dark) #inicio h1 {
+  color: #0f172a;
+}
+
+html:not(.dark) article,
+html:not(.dark) .bg-slate-800\/60,
+html:not(.dark) .bg-slate-800\/90,
+html:not(.dark) .bg-slate-900 {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+  border-color: #e2e8f0 !important;
+  color: #1e293b;
+}
+
+html:not(.dark) input,
+html:not(.dark) textarea {
+  background-color: #ffffff !important;
+  border-color: #cbd5e1 !important;
+  color: #0f172a !important;
+}
+
+html:not(.dark) footer {
+  background-color: #f1f5f9;
+  border-color: #e2e8f0;
+}
+
+html:not(.dark) h2,
+html:not(.dark) h3,
+html:not(.dark) .text-white {
+  color: #0f172a !important;
+}
+
+html:not(.dark) .text-slate-300,
+html:not(.dark) .text-slate-400 {
+  color: #64748b !important;
+}
+
+html:not(.dark) .border-slate-700\/60,
+html:not(.dark) .border-slate-700\/50,
+html:not(.dark) .border-slate-800 {
+  border-color: #e2e8f0 !important;
+}

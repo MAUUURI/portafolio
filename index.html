@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,6 +18,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
+      darkMode: 'class',
       theme: {
         extend: {
           colors: {
@@ -49,34 +50,48 @@
         </div>
 
         <!-- Enlaces Desktop -->
-        <div class="hidden md:flex space-x-8">
-          <a href="#inicio" class="relative py-1 text-slate-300 hover:text-white transition-colors duration-200 text-sm font-medium after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-indigo-500 hover:after:w-full after:transition-all after:duration-300">Inicio</a>
-          <a href="#sobre-mi" class="relative py-1 text-slate-300 hover:text-white transition-colors duration-200 text-sm font-medium after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-indigo-500 hover:after:w-full after:transition-all after:duration-300">Sobre Mí</a>
-          <a href="#proyectos" class="relative py-1 text-slate-300 hover:text-white transition-colors duration-200 text-sm font-medium after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-indigo-500 hover:after:w-full after:transition-all after:duration-300">Proyectos</a>
-          <a href="#habilidades" class="relative py-1 text-slate-300 hover:text-white transition-colors duration-200 text-sm font-medium after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-indigo-500 hover:after:w-full after:transition-all after:duration-300">Habilidades</a>
-          <a href="#estudios" class="relative py-1 text-slate-300 hover:text-white transition-colors duration-200 text-sm font-medium after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-indigo-500 hover:after:w-full after:transition-all after:duration-300">Estudios</a>
-          <a href="#contacto" class="relative py-1 text-slate-300 hover:text-white transition-colors duration-200 text-sm font-medium after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-indigo-500 hover:after:w-full after:transition-all after:duration-300">Contacto</a>
+        <div class="hidden md:flex space-x-8 items-center">
+          <a href="#inicio" class="nav-link relative py-1 text-slate-300 hover:text-white transition-colors duration-200 text-sm font-medium after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-indigo-500 hover:after:w-full after:transition-all after:duration-300">Inicio</a>
+          <a href="#sobre-mi" class="nav-link relative py-1 text-slate-300 hover:text-white transition-colors duration-200 text-sm font-medium after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-indigo-500 hover:after:w-full after:transition-all after:duration-300">Sobre Mí</a>
+          <a href="#proyectos" class="nav-link relative py-1 text-slate-300 hover:text-white transition-colors duration-200 text-sm font-medium after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-indigo-500 hover:after:w-full after:transition-all after:duration-300">Proyectos</a>
+          <a href="#habilidades" class="nav-link relative py-1 text-slate-300 hover:text-white transition-colors duration-200 text-sm font-medium after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-indigo-500 hover:after:w-full after:transition-all after:duration-300">Habilidades</a>
+          <a href="#estudios" class="nav-link relative py-1 text-slate-300 hover:text-white transition-colors duration-200 text-sm font-medium after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-indigo-500 hover:after:w-full after:transition-all after:duration-300">Estudios</a>
+          <a href="#contacto" class="nav-link relative py-1 text-slate-300 hover:text-white transition-colors duration-200 text-sm font-medium after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-indigo-500 hover:after:w-full after:transition-all after:duration-300">Contacto</a>
         </div>
 
-        <!-- Botón Hamburguesa Móvil -->
-        <div class="md:hidden flex items-center">
-          <button id="menu-btn" type="button" aria-label="Abrir menú" class="text-slate-300 hover:text-white focus:outline-none p-2 rounded-md transition-colors">
-            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        <div class="flex items-center space-x-3">
+          <!-- Botón Modo Oscuro / Claro (Sol / Luna) -->
+          <button id="theme-toggle" type="button" aria-label="Cambiar tema" class="p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            <!-- Icono Sol (modo oscuro activo) -->
+            <svg id="theme-toggle-light-icon" class="hidden w-5 h-5 text-amber-300" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+            </svg>
+            <!-- Icono Luna (modo claro activo) -->
+            <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5 text-indigo-700" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
             </svg>
           </button>
+
+          <!-- Botón Hamburguesa Móvil -->
+          <div class="md:hidden flex items-center">
+            <button id="menu-btn" type="button" aria-label="Abrir menú" class="text-slate-300 hover:text-white focus:outline-none p-2 rounded-md transition-colors">
+              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
     </div>
 
     <!-- Menú Móvil (oculto inicialmente) -->
     <div id="mobile-menu" class="hidden md:hidden px-4 pt-2 pb-4 space-y-1 bg-slate-900/95 border-b border-slate-800">
-      <a href="#inicio" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800 transition-colors">Inicio</a>
-      <a href="#sobre-mi" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800 transition-colors">Sobre Mí</a>
-      <a href="#proyectos" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800 transition-colors">Proyectos</a>
-      <a href="#habilidades" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800 transition-colors">Habilidades</a>
-      <a href="#estudios" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800 transition-colors">Estudios</a>
-      <a href="#contacto" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800 transition-colors">Contacto</a>
+      <a href="#inicio" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800 transition-colors">Inicio</a>
+      <a href="#sobre-mi" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800 transition-colors">Sobre Mí</a>
+      <a href="#proyectos" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800 transition-colors">Proyectos</a>
+      <a href="#habilidades" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800 transition-colors">Habilidades</a>
+      <a href="#estudios" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800 transition-colors">Estudios</a>
+      <a href="#contacto" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800 transition-colors">Contacto</a>
     </div>
   </nav>
 
@@ -138,7 +153,7 @@
     </section>
 
     <section id="sobre-mi" class="min-h-screen py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto flex items-center justify-center">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center w-full">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center w-full reveal">
         <!-- Columna Izquierda: Imagen / Placeholder interactiva -->
         <div class="relative group mx-auto w-full max-w-md aspect-square">
           <div class="absolute -inset-1 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-3xl blur opacity-25 group-hover:opacity-60 transition duration-500"></div>
@@ -237,7 +252,7 @@
       </div>
 
       <!-- EDITAR: reemplaza estos proyectos con tus proyectos reales -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 reveal">
         <!-- Proyecto 1: Python + MySQL -->
         <article class="bg-slate-800/60 backdrop-blur-sm border border-slate-700/60 rounded-2xl overflow-hidden hover:border-indigo-500/50 hover:shadow-2xl hover:shadow-indigo-500/20 hover:-translate-y-2 transition-all duration-300 flex flex-col group">
           <!-- Thumbnail placeholder -->
@@ -397,7 +412,7 @@
       </div>
 
       <!-- Contenedor de Categorías -->
-      <div class="space-y-12">
+      <div class="space-y-12 reveal">
         <!-- Categoría 1: Lenguajes y Backend -->
         <div>
           <div class="flex items-center space-x-3 mb-6">
@@ -587,7 +602,7 @@
       </div>
 
       <!-- EDITAR: coloca tus estudios reales -->
-      <div class="relative border-l-2 border-indigo-500 ml-4 sm:ml-8 md:mx-auto md:max-w-3xl pl-6 sm:pl-8 space-y-12">
+      <div class="relative border-l-2 border-indigo-500 ml-4 sm:ml-8 md:mx-auto md:max-w-3xl pl-6 sm:pl-8 space-y-12 reveal">
         <!-- Ítem 1 -->
         <div class="relative group">
           <!-- Punto circular del timeline -->
@@ -664,7 +679,7 @@
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start max-w-5xl mx-auto w-full">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start max-w-5xl mx-auto w-full reveal">
         <!-- Columna Izquierda: Formulario -->
         <div class="bg-slate-800/60 backdrop-blur-sm border border-slate-700/60 rounded-2xl p-6 sm:p-8 shadow-xl shadow-black/10">
           <h3 class="text-xl font-bold text-white mb-6">Envíame un mensaje</h3>
